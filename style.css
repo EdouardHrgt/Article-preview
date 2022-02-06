@@ -17,6 +17,8 @@
   box-sizing: border-box;
 }
 
+
+
 .container {
   height: 100vh;
   background-color: var(--light-blue);
@@ -114,19 +116,19 @@
   outline: var(--gray-blue) 1px solid;
 }
 
-#modal {
+.modal {
   background-color: var(--blue);
   position: absolute;
   width: 250px;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 5px;
-  top: -3.5rem;
+  top: -3.6rem;
   right: -7rem;
   display: none;
 }
 
-#modal strong {
+.modal strong {
   color: var(--gray-blue);
   font-weight: var(--weight-2);
   font-size: 0.7rem;
@@ -151,14 +153,25 @@
     width: 100%;
     border-radius: 15px 15px 0 0;
   }
-
   .card-content {
     width: 100%;
     padding: 2rem 0 1rem 2rem;
   }
-
   .card-content h1 {
     font-size: 1.2rem;
     width: 90%;
+  }
+  .modal {
+    width: 370px;
+    border-radius: 0 0 15px 15px;
+    bottom: -2.75rem;
+    top: 0;
+    right: -3.3rem;
+  }
+  .modal strong {
+    font-size: 0.9rem;
+  }
+  .socials a {
+    padding: 0 1rem;
   }
 }
