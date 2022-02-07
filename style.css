@@ -17,8 +17,6 @@
   box-sizing: border-box;
 }
 
-
-
 .container {
   height: 100vh;
   background-color: var(--light-blue);
@@ -69,6 +67,7 @@
 .author {
   display: flex;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .author-image {
@@ -109,7 +108,9 @@
   border-radius: 50%;
   background-color: var(--light-blue);
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  right: 5.95rem;
+  z-index: 10;
 }
 
 .author button:hover {
@@ -119,25 +120,32 @@
 .modal {
   background-color: var(--blue);
   position: absolute;
-  width: 250px;
+  width: 275px;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 5px;
-  top: -3.6rem;
-  right: -7rem;
+  top: -4.2rem;
+  right: -1.5rem;
   display: none;
 }
 
 .modal strong {
   color: var(--gray-blue);
   font-weight: var(--weight-2);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   letter-spacing: 2px;
   padding: 1rem 0;
 }
 
+.modal i {
+  position: absolute;
+  bottom: -1.7rem;
+  font-size: 3rem;
+  color: var(--blue);
+}
+
 .socials a {
-  padding: 0 0.3rem;
+  padding: 0 0.7rem;
 }
 
 .active {
@@ -161,15 +169,25 @@
     font-size: 1.2rem;
     width: 90%;
   }
+  .author button {
+    right: 1rem;
+    top: 1.3rem;
+    z-index: 10;
+  }
   .modal {
     width: 370px;
     border-radius: 0 0 15px 15px;
-    bottom: -2.75rem;
+    bottom: -2rem;
     top: 0;
-    right: -3.3rem;
+    right: 0;
+    justify-content: flex-start;
   }
   .modal strong {
     font-size: 0.9rem;
+    margin: 0 2rem;
+  }
+  .modal i {
+    display: none;
   }
   .socials a {
     padding: 0 1rem;
